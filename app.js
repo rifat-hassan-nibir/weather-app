@@ -7,14 +7,15 @@ const loadWeatherData = (city) => {
 };
 
 const displayTemperature = (data) => {
-  const temperatureElement = document.getElementById("temperature");
-  temperatureElement.innerText = `${data.main.temp}`;
+  setInnerTextById("temperature", data.main.temp);
+  setInnerTextById("city", data.name);
+  setInnerTextById("weather-type", data.weather[0].main);
+};
 
-  const cityElement = document.getElementById("city");
-  cityElement.innerText = `${data.name}`;
-
-  const weatherTypeElement = document.getElementById("weather-type");
-  weatherTypeElement.innerText = `${data.weather[0].main}`;
+// Set inner text by id
+const setInnerTextById = (id, innerText) => {
+  const element = document.getElementById(id);
+  element.innerText = innerText;
 };
 
 // Search Functionality
