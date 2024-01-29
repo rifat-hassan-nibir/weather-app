@@ -14,7 +14,7 @@ const displayTemperature = (data) => {
   cityElement.innerText = `${data.name}`;
 
   const weatherTypeElement = document.getElementById("weather-type");
-  weatherTypeElement.innerText = `${data.weather[0].description}`;
+  weatherTypeElement.innerText = `${data.weather[0].main}`;
 };
 
 // Search Functionality
